@@ -1,0 +1,2 @@
+# Chest-X-ray-Classification-Based-on-Cross-Attention-EfficientNet-and-Swin-Transformer
+NIH ChestX-ray14 multi-label chest X-ray classification using a cross-attention fusion model combining EfficientNet and Swin Transformer. The model integrates local and global features through cross-attention, with residual connections and positional embeddings to improve feature propagation and spatial representation.
