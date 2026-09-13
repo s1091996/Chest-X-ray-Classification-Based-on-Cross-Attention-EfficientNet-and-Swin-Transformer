@@ -123,6 +123,3 @@ Macro averages are also calculated across labels. Add a results table, training 
 - [ ] Add a configuration template or command-line arguments to remove machine-specific paths.
 - [ ] Publish a reproducible experiment table and visualizations.
 
-## License
-
-No license is currently included. Add a license before inviting others to reuse or distribute the code (MIT is a common choice for portfolio projects).
