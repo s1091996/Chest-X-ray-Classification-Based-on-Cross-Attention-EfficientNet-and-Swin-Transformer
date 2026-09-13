@@ -35,10 +35,10 @@ The project is intended for research and portfolio purposes only. It is **not a 
 
 ## Model Status
 
-| Component | Status | Notes |
-| --- | --- | --- |
-| EfficientNet-B5 baseline | Runnable | `main.py` currently creates this model with `timm.create_model(...)`. |
-| Cross-attention fusion model | Experimental | Implemented in `model.py`, but is not yet wired into `main.py`'s training flow. |
+| Component | Notes |
+| --- | --- |
+| EfficientNet-B5 baseline | `main.py` currently creates this model with `timm.create_model(...)`. |
+| Cross-attention fusion model | Implemented in `model.py`, but is not yet wired into `main.py`'s training flow. |
 
 Keeping this distinction visible makes the repository reproducible and accurately represents the current implementation.
 
