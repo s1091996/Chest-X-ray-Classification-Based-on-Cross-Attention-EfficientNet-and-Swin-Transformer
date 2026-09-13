@@ -84,6 +84,7 @@ IMAGE_ROOT = "<path to NIH ChestXray14 images>"
 
 ```bash
 python main.py
+python model.py
 ```
 
 The workflow trains the EfficientNet baseline, selects validation thresholds that maximize per-label F1, loads the best validation-F1 checkpoint, then writes evaluation results to the configured output directory.
