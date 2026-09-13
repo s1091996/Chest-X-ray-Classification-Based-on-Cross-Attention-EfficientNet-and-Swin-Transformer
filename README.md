@@ -104,12 +104,4 @@ For each label, the evaluation script reports:
 
 - Set fixed random seeds if you need strictly repeatable experiments.
 - Keep training configuration and split definitions versioned alongside experiment results.
-- Record GPU model, PyTorch/CUDA versions, epoch count, and the selected checkpoint when publishing metrics.
-
-## Roadmap
-
-- [ ] Connect `DualStreamModel` to the main training entry point.
-- [ ] Add auxiliary-loss handling for its multiple training outputs.
-- [ ] Add a configuration template or command-line arguments to remove machine-specific paths.
-- [ ] Publish a reproducible experiment table and visualizations.
 
