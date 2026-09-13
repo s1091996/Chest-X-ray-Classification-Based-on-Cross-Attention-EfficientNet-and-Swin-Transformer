@@ -65,8 +65,6 @@ Mass, Edema, Nodule, Effusion, Pleural_Thickening, Emphysema,
 Pneumonia, Fibrosis, Pneumothorax, No Finding
 ```
 
-Do not commit the NIH images or CSV splits if their licence, distribution terms, or patient-data policy does not allow redistribution.
-
 ## Setup
 
 Tested configuration: Python 3.10+ with a CUDA-enabled PyTorch installation recommended for training.
