@@ -99,8 +99,6 @@ For each label, the evaluation script reports:
 - ROC-AUC
 - The decision threshold selected from validation predictions
 
-Macro averages are also calculated across labels. Add a results table, training curves, confusion matrices, or ROC plots here once you have exportable experiment outputs; these are especially valuable for a portfolio repository.
-
 ## Reproducibility Notes
 
 - Set fixed random seeds if you need strictly repeatable experiments.
