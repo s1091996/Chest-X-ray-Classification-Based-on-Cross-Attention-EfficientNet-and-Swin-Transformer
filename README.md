@@ -23,8 +23,7 @@ The project is intended for research and portfolio purposes only. It is **not a 
 .
 ├── config.py                  # Hyperparameters, labels, and local data/output paths
 ├── main.py                    # Current baseline training and test evaluation entry point
-├── model.py                   # Experimental EfficientNet + Swin cross-attention model
-├── cross_attention_model.py   # Earlier experimental cross-attention variant
+├── cross_attention_model.py   # EfficientNet + Swin cross-attention model
 ├── model_manager.py           # Training loop, AMP, checkpoints, early stopping
 ├── dataset.py                 # Dataset class and image transforms
 ├── dataloader.py              # Train/validation/test DataLoaders
