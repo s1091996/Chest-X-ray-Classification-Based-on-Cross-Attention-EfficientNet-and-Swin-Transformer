@@ -124,7 +124,7 @@ NUM_EPOCHS = 10
 OPTIMIZER_LR = 1e-4
 ```
 
-### 5. 啟動模型訓練
+### 5. 模型訓練
 
 **步驟 A：訓練單一 EfficientNet-B5 骨幹作為基準或權重來源**
 ```bash
