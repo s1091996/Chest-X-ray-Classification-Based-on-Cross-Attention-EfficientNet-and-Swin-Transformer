@@ -48,17 +48,6 @@
 產出 15 類多標籤預測結果、指標報表與混淆分析圖表
 ```
 
-### 主要模組職責說明
-
-- `config.py`：集中定義疾病標籤簡寫、影像尺寸（384×384）、批次大小（8）、梯度累積步數（2）、學習率與資料路徑。
-- `dataset.py`：實作 `NIHDataset`，支援 12 組影像目錄自動索引、灰階三通道轉變（`RepeatIfGray`）與安全幾何資料增強。
-- `dataloader.py`：讀取以病人 ID 切分之 `train.csv`、`val.csv` 與 `test.csv`，構建具備多工讀取的 PyTorch DataLoader。
-- `train_fusion.py`：核心雙流特徵融合網路 `DualStreamModel` 實作，包含投影層、交叉注意力、FFN 與可學習動態融合權重微調。
-- `train_backbone.py`：單一 EfficientNet-B5 / Swin 骨幹網路訓練腳本，供基線對照並產生預訓練特徵權重。
-- `model_manager.py`：模型生命週期管理，包含自動混合精度（AMP GradScaler）、設定檔自動備份、早停機制與權重存取。
-- `evaluate.py`：推論評估模組，執行驗證集最佳門檻搜尋（0.01～0.99），計算 Acc、Precision、Sensitivity、Specificity、F1、AUC 並儲存報表。
-- `print_config.py`：訓練前格式化輸出完整超參數清單。
-
 ## 4. 專案結構（Project Structure）
 
 ```text
