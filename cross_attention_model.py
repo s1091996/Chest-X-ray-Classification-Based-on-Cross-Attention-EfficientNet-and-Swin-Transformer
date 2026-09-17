@@ -180,39 +180,3 @@ if __name__ == '__main__':
     manager = ModelManager(model, optimizer)
     manager.train(train_loader, val_loader)
     manager.model.eval()
-    evaluate(model, test_loader, save_file_path=os.path.join(os.path.join(MODEL_FILE_PATH, MODEL_NAME), "test_resultaaa.csv"), printr=True)
-    #evaluate(model,test_loader,save_file_path=os.path.join(os.path.join(MODEL_FILE_PATH, MODEL_NAME),"Real_test_result5.csv"),printr=True)
-    '''
-    new_lrs = [1e-5, 1e-4, 1e-4, 1e-4, 1e-4, 1e-4]
-    for i, param_group in enumerate(manager.optimizer.param_groups):
-        param_group['lr'] = new_lrs[i]
-        print(f"Group {i} updated to: {param_group['lr']:.2e}")
-
-    #manager.load_statement(5, file_path=r"C:\CheSwinV3\ModelResult\0325_Effb5_swinb_384_original_attention_AllPretrained_con_posembed\0325_Effb5_swinb_384_original_attention_AllPretrained_con_posembed_epoch5_checkpoint.pth")
-    torch.cuda.empty_cache()
-    #manager.train(train_loader, val_loader)
-    torch.cuda.empty_cache()
-    #evaluate(model,test_loader,save_file_path=os.path.join(os.path.join(MODEL_FILE_PATH, MODEL_NAME),"Real_test_result4.csv"),printr=True)
-
-    #manager.load_statement(epoch=10,file_path=r"C:\CheSwinV3\ModelResult\0513_Effb5_swinb_384_original_attention_AllPretrained_Gating_rgs\0513_Effb5_swinb_384_original_attention_AllPretrained_Gating_rgs_epoch10_checkpoint.pth") # 載入你剛訓練好的 Attention
-
-    # 🌟 1. 解凍所有模型參數
-    for param in model.parameters():
-        param.requires_grad = True
-    #manager.load_statement(epoch=10,file_path=r"C:\CheSwinV3\ModelResult\0513_Effb5_swinb_384_original_attention_AllPretrained_Gating_rgs\0513_Effb5_swinb_384_original_attention_AllPretrained_Gating_rgs_epoch10_checkpoint.pth") # 載入你剛訓練好的 Attention
-    # 🌟 2. 設定「差分學習率 (Differential Learning Rate)」
-    # 學霸 (Backbone) 用極小的學習率微調，新同學 (Attention) 用稍大的學習率
-    backbone_params = list(model.backbone_cnn.parameters()) + list(model.backbone_swin.parameters())
-    attn_params = [p for n, p in model.named_parameters() if 'backbone' not in n]
-
-    # Backbone 用 1e-5 避免崩潰，Attention 維持 1e-4 或降為 5e-5
-    optimizer = torch.optim.AdamW([
-        {'params': backbone_params, 'lr': 1e-5},
-        {'params': attn_params, 'lr': 5e-5}
-    ], weight_decay=1e-3)
-
-    # 重新綁定優化器並繼續訓練 Epoch 8 ~ 15
-    manager.optimizer = optimizer
-    manager.train(train_loader, val_loader)
-    evaluate(model,test_loader,save_file_path=os.path.join(os.path.join(MODEL_FILE_PATH, MODEL_NAME),"Real_test_result15.csv"),printr=True)
-    '''
