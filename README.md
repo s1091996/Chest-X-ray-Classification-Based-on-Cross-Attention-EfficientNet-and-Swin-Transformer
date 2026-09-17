@@ -60,7 +60,7 @@ exp_original__/
 ├── model_manager.py
 ├── print_config.py
 ├── train_backbone.py
-├── train_fusion.py
+└── train_fusion.py
 ```
 
 | 檔案／目錄 | 用途說明 |
